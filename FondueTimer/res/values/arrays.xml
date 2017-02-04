@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources >
+    <string-array name="colors">
+        <item name="black">Black</item>
+		<item name="blue">Blue</item>
+		<item name="brown">Brown</item>
+		<item name="green">Green</item>
+		<item name="pink">Pink</item>
+		<item name="red">Red</item>
+		<item name="teal">Teal</item>
+		<item name="white">White</item>
+		<item name="yellow">Yellow</item>
+	</string-array>
+	<string-array name="cooking_methods">
+	    <item name="broth">Broth</item>
+	    <item name="oil">Oil</item>
+	</string-array>
+</resources>

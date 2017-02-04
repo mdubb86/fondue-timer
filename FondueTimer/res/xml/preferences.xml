@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <ListPreference
+        android:key="pref_cooking_method"
+        android:title="Cooking Method"
+        android:summary="Broth"
+        android:entries="@array/cooking_methods"
+        android:entryValues="@array/cooking_methods"
+        android:defaultValue="Broth"/>
+    
+    <SwitchPreference
+        android:key="pref_vibrate"
+        android:title="@string/pref_vibrate"
+        android:summaryOn="Vibration on"
+        android:summaryOff="Vibration off"
+        android:defaultValue="false" />
+    
+    <PreferenceScreen 
+        android:key="pref_timers"
+        android:persistent="false"
+        android:title="Cooking Times">
+        <PreferenceScreen
+            android:title="Broth">
+	        <EditTextPreference 
+	            android:key="pref_broth_chicken_time"
+	            android:title="Chicken"
+	            android:defaultValue="120"
+	            android:summary="120 seconds"
+	            android:inputType="number" />
+	    	<EditTextPreference 
+	            android:key="pref_broth_beef_time"
+	            android:title="Beef"
+	            android:defaultValue="120"
+	            android:summary="120 seconds"
+	            android:inputType="number" />
+	    	<EditTextPreference 
+	            android:key="pref_broth_pork_time"
+	            android:title="Pork"
+	            android:defaultValue="120"
+	            android:summary="120 seconds"
+	            android:inputType="number" />
+	    	<EditTextPreference 
+	            android:key="pref_broth_seafood_time"
+	            android:title="Seafood"
+	            android:defaultValue="90"
+	            android:summary="90 seconds"
+	            android:inputType="number" />
+	    	<EditTextPreference 
+	            android:key="pref_broth_vegetable_time"
+	            android:title="Vegetable"
+	            android:defaultValue="90"
+	            android:summary="90 seconds"
+	            android:inputType="number" />
+    	</PreferenceScreen>
+    	<PreferenceScreen
+            android:title="Oil">
+	        <EditTextPreference 
+	            android:key="pref_oil_chicken_time"
+	            android:title="Chicken"
+	            android:defaultValue="150"
+	            android:summary="150 seconds"
+	            android:inputType="number" />
+	    	<EditTextPreference 
+	            android:key="pref_oil_beef_time"
+	            android:title="Beef"
+	            android:defaultValue="150"
+	            android:summary="150 seconds"
+	            android:inputType="number" />
+	    	<EditTextPreference 
+	            android:key="pref_oil_pork_time"
+	            android:title="Pork"
+	            android:defaultValue="150"
+	            android:summary="150 seconds"
+	            android:inputType="number" />
+	    	<EditTextPreference 
+	            android:key="pref_oil_seafood_time"
+	            android:title="Seafood"
+	            android:defaultValue="120"
+	            android:summary="120 seconds"
+	            android:inputType="number" />
+	    	<EditTextPreference 
+	            android:key="pref_oil_vegetable_time"
+	            android:title="Vegetable"
+	            android:defaultValue="120"
+	            android:summary="120 seconds"
+	            android:inputType="number" />
+    	</PreferenceScreen>
+    </PreferenceScreen>
+    
+    <PreferenceCategory 
+        android:title="Guest Information"
+        android:key="pref_guests">    	
+	    <PreferenceScreen 
+	        android:key="pref_guest1"
+	        android:persistent="false"
+	        android:title="Guest 1">
+	        <CheckBoxPreference
+	            android:defaultValue="true"
+	            android:key="pref_guest1_enabled"
+	            android:title="Enabled" />
+	        <EditTextPreference
+	            android:defaultValue="Guest 1"
+	            android:key="pref_guest1_name"
+	            android:title="Name"
+	            android:dependency="pref_guest1_enabled" />
+	        <ListPreference
+	            android:key="pref_guest1_color"
+	            android:title="Fork Color"
+	            android:dependency="pref_guest1_enabled"
+	            android:entries="@array/colors" 
+	            android:entryValues="@array/colors"
+	            android:defaultValue="Red"
+	            android:icon="@drawable/square_red"/>        
+	    </PreferenceScreen>
+	    
+	    <PreferenceScreen 
+	        android:key="pref_guest2"
+	        android:persistent="false"
+	        android:title="Guest 2">
+	        <CheckBoxPreference
+	            android:defaultValue="true"
+	            android:key="pref_guest2_enabled"
+	            android:title="Enabled" />
+	        <EditTextPreference
+	            android:defaultValue="Guest 2"
+	            android:key="pref_guest2_name"
+	            android:title="Name"
+	            android:dependency="pref_guest2_enabled" />
+	        <ListPreference
+	            android:key="pref_guest2_color"
+	            android:title="Fork Color"
+	            android:entries="@array/colors" 
+	            android:entryValues="@array/colors"
+	            android:defaultValue="Blue"
+	            android:dependency="pref_guest2_enabled"
+	            android:icon="@drawable/square_blue"/>        
+	    </PreferenceScreen>
+	    
+	    <PreferenceScreen 
+	        android:key="pref_guest3"
+	        android:persistent="false"
+	        android:title="Guest 3">
+	        <CheckBoxPreference
+	            android:defaultValue="false"
+	            android:key="pref_guest3_enabled"
+	            android:title="Enabled" />
+	        <EditTextPreference
+	            android:defaultValue="Guest 3"
+	            android:key="pref_guest3_name"
+	            android:title="Name"
+	            android:dependency="pref_guest3_enabled" />
+	        <ListPreference
+	            android:key="pref_guest3_color"
+	            android:title="Fork Color"
+	            android:dependency="pref_guest3_enabled"
+	            android:entries="@array/colors" 
+	            android:entryValues="@array/colors"
+	            android:defaultValue="Green"
+	            android:icon="@drawable/square_green"/>        
+	    </PreferenceScreen>
+	    
+	    <PreferenceScreen 
+	        android:key="pref_guest4"
+	        android:persistent="false"
+	        android:title="Guest 4">
+	        <CheckBoxPreference
+	            android:defaultValue="false"
+	            android:key="pref_guest4_enabled"
+	            android:title="Enabled" />
+	        <EditTextPreference
+	            android:defaultValue="Guest 4"
+	            android:key="pref_guest4_name"
+	            android:title="Name"
+	            android:dependency="pref_guest4_enabled" />
+	        <ListPreference
+	            android:key="pref_guest4_color"
+	            android:title="Fork Color"
+	            android:dependency="pref_guest4_enabled"
+	            android:entries="@array/colors" 
+	            android:entryValues="@array/colors"
+	            android:defaultValue="Yellow"
+	            android:icon="@drawable/square_yellow"/>        
+	    </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>

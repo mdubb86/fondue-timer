@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/selection_background"
+        android:orientation="horizontal" >
+
+        <com.meridian.fonduetimer.ForkColorView
+            android:id="@+id/fork_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".1666"
+            android:onClick="showGuestSelectionMenu"
+            android:layout_marginLeft="5dp"            
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/square_blue" />
+
+        <ImageView
+            android:id="@+id/chicken_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="3dp"
+            android:layout_weight=".1666"
+            android:onClick="addTimerRow"
+            android:src="@drawable/morsel_chicken" />
+
+        <ImageView
+            android:id="@+id/beef_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="3dp"
+            android:layout_weight=".1666"
+            android:onClick="addTimerRow"
+            android:src="@drawable/morsel_beef" />
+
+        <ImageView
+            android:id="@+id/pork_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="3dp"
+            android:layout_weight=".1666"
+            android:onClick="addTimerRow"
+            android:scaleType="fitCenter"
+            android:src="@drawable/morsel_pork" />
+
+        <ImageView
+            android:id="@+id/seafood_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="3dp"
+            android:layout_weight=".1666"
+            android:onClick="addTimerRow"
+            android:scaleType="fitCenter"
+            android:src="@drawable/morsel_seafood" />
+
+        <ImageView
+            android:id="@+id/vegetable_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight=".1666"
+            android:onClick="addTimerRow"
+            android:scaleType="fitCenter"
+            android:src="@drawable/morsel_vegetable" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:background="@color/list_background" />
+
+</LinearLayout>
